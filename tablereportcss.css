@@ -1,4 +1,4 @@
-/* Hide the extra "Question" heading above the table */
+/* Tooltip style */
 #tooltip {
   position: absolute;
   padding: 8px 12px;
@@ -12,6 +12,7 @@
   z-index: 10;
 }
 
+/* Table font setup */
 .tooltipTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   border-collapse: collapse;
@@ -30,52 +31,62 @@
   background-color: #fef9d7;
 }
 
+/* Main report table */
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  width: 90%; /* Reduced overall width */
+  width: 90%;
   border-collapse: collapse;
   table-layout: auto;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   overflow: hidden;
-  margin: 20px auto; /* Centered the table with margin */
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  max-height: 500px;
+  overflow-y: auto;
+  display: block;
 }
 
-/* Header and cell styling */
-.reportTable th,
+/* Header row styling with fixed position */
+.reportTable thead th {
+  position: sticky;
+  top: 0;
+  background-color: #1E2C5B;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 2;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+
+/* Table body rows */
 .reportTable td {
-  padding: 8px 12px; /* Reduced padding for compact spacing */
-  border: 1px solid #ccc; /* Visible inner cell borders */
+  padding: 8px 12px;
+  border: 1px solid #ccc;
   vertical-align: top;
   text-align: left;
   font-size: 13px;
   color: #333;
   white-space: normal !important;
   word-wrap: break-word;
+  background-color: #fdfdfd; /* Light background for content */
 }
 
-/* Table header row */
-.reportTable th {
-  background-color: #0f544b;
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* Hover effect */
+/* Row hover */
 .reportTable tr:hover td {
-  background-color: #f9fbff;
+  background-color: #f0f4ff;
 }
 
-/* Cell text formatting */
+/* Content emphasis */
 .reportTable td.answer {
   color: #555;
   font-weight: 500;
 }
 
-/* Style for blank responses */
+/* Empty responses */
 .blankAnswer {
   color: #aaa;
   font-style: italic;
