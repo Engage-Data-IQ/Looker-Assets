@@ -1,34 +1,30 @@
-/* Hide the extra "Question" heading above the table */
-h2:first-of-type {
-  display: none;
-}
-
+/* Table Styling */
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  width: 90%; /* Reduced overall width */
+  width: 90%; /* reduced size from 100% */
   border-collapse: collapse;
-  table-layout: auto;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px auto; /* Centered the table with margin */
+  border-radius: 6px;
+  margin: 10px auto; /* center and reduce margin */
+  font-size: 13px;
 }
 
-/* Header and cell styling */
+/* Table Headers and Data Cells */
 .reportTable th,
 .reportTable td {
-  padding: 8px 12px; /* Reduced padding for compact spacing */
-  border: 1px solid #ccc; /* Visible inner cell borders */
+  padding: 10px 12px; /* reduced padding */
+  border: 1px solid #e0e0e0; /* full borders on all cells */
   vertical-align: top;
   text-align: left;
-  font-size: 13px;
   color: #333;
-  white-space: normal !important;
+  white-space: normal;
   word-wrap: break-word;
+  max-width: 400px; /* optional: prevent extremely wide cells */
+  overflow-wrap: break-word;
 }
 
-/* Table header row */
+/* Table Header Styling */
 .reportTable th {
   background-color: #1E2C5B;
   color: #ffffff;
@@ -37,19 +33,42 @@ h2:first-of-type {
   font-weight: 600;
 }
 
-/* Hover effect */
-.reportTable tr:hover td {
-  background-color: #f9fbff;
+/* Zebra striping for rows */
+.reportTable tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-/* Cell text formatting */
+/* Cell-specific styles */
 .reportTable td.answer {
   color: #555;
   font-weight: 500;
 }
 
-/* Style for blank responses */
+/* Blank value styling */
 .blankAnswer {
   color: #aaa;
   font-style: italic;
+}
+
+/* Hover effect */
+.reportTable tr:hover td {
+  background-color: #f1f7ff;
+}
+
+/* Optional column width control */
+.reportTable th:first-child,
+.reportTable td:first-child {
+  width: 35%;
+}
+
+.reportTable th:last-child,
+.reportTable td:last-child {
+  width: 65%;
+}
+
+/* Remove standalone "Question" label above the table */
+h2:contains("Question"),
+div:has(> strong:contains("Question")),
+div:has(> h2:contains("Question")) {
+  display: none !important;
 }
