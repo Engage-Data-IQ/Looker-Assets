@@ -1,23 +1,23 @@
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  width: 100%;
+  width: 80%; /* Reduced width from 100% */
   border-collapse: collapse;
   table-layout: auto;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 20px;
-  border: 1px solid #dcdcdc; /* Outer table border */
+  margin: 20px auto; /* Center the table */
+  border: 1px solid #dcdcdc;
 }
 
 .reportTable th,
 .reportTable td {
-  padding: 16px 20px;
-  border: 1px solid #e0e0e0; /* Cell borders (all sides) */
+  padding: 10px 12px; /* Reduced padding */
+  border: 1px solid #e0e0e0;
   vertical-align: top;
   text-align: left;
-  font-size: 14px;
+  font-size: 13px; /* Slightly smaller font */
   color: #333;
   white-space: normal !important;
   word-wrap: break-word;
@@ -27,7 +27,7 @@
 .reportTable th {
   background-color: #1E2C5B;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
 }
