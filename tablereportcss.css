@@ -1,7 +1,7 @@
 /* Hide the extra "Question" heading above the table */
-h2:first-of-type {
-  display: none;
-}
+ h2{
+    color:white;
+  }
 
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
