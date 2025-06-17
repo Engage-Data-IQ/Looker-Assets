@@ -8,18 +8,20 @@
   border-radius: 8px;
   overflow: hidden;
   margin-top: 20px;
+  border: 1px solid #dcdcdc; /* Outer table border */
 }
 
 .reportTable th,
 .reportTable td {
   padding: 16px 20px;
-  border-bottom: 1px solid #e0e0e0;
+  border: 1px solid #e0e0e0; /* Cell borders (all sides) */
   vertical-align: top;
   text-align: left;
   font-size: 14px;
   color: #333;
   white-space: normal !important;
   word-wrap: break-word;
+  word-break: break-word;
 }
 
 .reportTable th {
