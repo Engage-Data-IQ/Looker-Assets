@@ -1,17 +1,7 @@
-/* Hide the extra "Question" heading above the table */
-#tooltip {
-  position: absolute;
-  padding: 8px 12px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  pointer-events: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #333;
-  z-index: 10;
-}
+/* Tooltip styles removed entirely */
 
+
+/* General table styles */
 .tooltipTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   border-collapse: collapse;
@@ -30,6 +20,7 @@
   background-color: #fef9d7;
 }
 
+/* Main table container */
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   width: 90%; /* Reduced overall width */
@@ -55,14 +46,23 @@
   word-wrap: break-word;
 }
 
-/* Table header row */
+/* Table header row - visually hidden but structure retained */
+.reportTable th {
+  background-color: #ffffff; /* Match background */
+  color: transparent;        /* Hide text */
+  font-size: 0;              /* Shrink font */
+  border: none;              /* Optional: remove header borders */
+  height: 0;                 /* Collapse height */
+  padding: 0;
+  line-height: 0;
+}
 
-/* Hover effect */
+/* Row hover effect */
 .reportTable tr:hover td {
   background-color: #f9fbff;
 }
 
-/* Cell text formatting */
+/* Answer column cell styling */
 .reportTable td.answer {
   color: #555;
   font-weight: 500;
