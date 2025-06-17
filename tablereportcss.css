@@ -4,21 +4,21 @@
   border-collapse: collapse;
   table-layout: auto;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  overflow: hidden;
+  border: 1px solid #dcdcdc; /* outer border */
+  border-radius: 6px;
   margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .reportTable th,
 .reportTable td {
-  padding: 16px 20px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0; /* inner borders */
   vertical-align: top;
   text-align: left;
   font-size: 14px;
   color: #333;
-  white-space: normal !important;
+  white-space: normal;
   word-wrap: break-word;
 }
 
@@ -30,16 +30,26 @@
   font-weight: 600;
 }
 
-.reportTable tr:hover td {
-  background-color: #f9fbff;
+.reportTable tr:nth-child(even) {
+  background-color: #f9f9f9; /* striped rows */
 }
 
 .reportTable td.answer {
-  color: #555;
-  font-weight: 500;
+  color: #444;
 }
 
 .blankAnswer {
-  color: #aaa;
+  color: #999;
   font-style: italic;
+}
+
+/* Optional: Manually set column widths */
+.reportTable th:first-child,
+.reportTable td:first-child {
+  width: 35%;
+}
+
+.reportTable th:last-child,
+.reportTable td:last-child {
+  width: 65%;
 }
