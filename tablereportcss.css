@@ -1,4 +1,4 @@
-/* Tooltip style */
+/* Hide the extra "Question" heading above the table */
 #tooltip {
   position: absolute;
   padding: 8px 12px;
@@ -12,7 +12,6 @@
   z-index: 10;
 }
 
-/* Table font setup */
 .tooltipTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   border-collapse: collapse;
@@ -31,62 +30,45 @@
   background-color: #fef9d7;
 }
 
-/* Main report table */
 .reportTable {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  width: 90%;
+  width: 90%; /* Reduced overall width */
   border-collapse: collapse;
   table-layout: auto;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   overflow: hidden;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  max-height: 500px;
-  overflow-y: auto;
-  display: block;
+  margin: 20px auto; /* Centered the table with margin */
 }
 
-/* Header row styling with fixed position */
-.reportTable thead th {
-  position: sticky;
-  top: 0;
-  background-color: #1E2C5B;
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-  z-index: 2;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-}
-
-/* Table body rows */
+/* Header and cell styling */
+.reportTable th,
 .reportTable td {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
+  padding: 8px 12px; /* Reduced padding for compact spacing */
+  border: 1px solid #ccc; /* Visible inner cell borders */
   vertical-align: top;
   text-align: left;
   font-size: 13px;
   color: #333;
   white-space: normal !important;
   word-wrap: break-word;
-  background-color: #fdfdfd; /* Light background for content */
 }
 
-/* Row hover */
+/* Table header row */
+
+/* Hover effect */
 .reportTable tr:hover td {
-  background-color: #f0f4ff;
+  background-color: #f9fbff;
 }
 
-/* Content emphasis */
+/* Cell text formatting */
 .reportTable td.answer {
   color: #555;
   font-weight: 500;
 }
 
-/* Empty responses */
+/* Style for blank responses */
 .blankAnswer {
   color: #aaa;
   font-style: italic;
