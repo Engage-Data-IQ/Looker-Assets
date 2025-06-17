@@ -1,201 +1,159 @@
 @font-face {
-    font-family: 'Noto Sans TC';
-    src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
-  }
-  @font-face {
-    font-family: 'Noto Sans SC';
-    src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
-  }
-  
-  
-  #tooltip {
-      position: absolute;
-      width: auto;
-      height: auto;
-      padding: 5px;
-      background-color: white;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-      -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-      pointer-events: none;
-      font-family: sans-serif;
-      font-size: 12px;
-      z-index: 2;
-  }
-  
-  .tooltipTable {
-    font-family: Open Sans,Helvetica,Arial,sans-serif;
-    border: 0px;
-    border-collapse: collapse;
-    table-layout: auto;
-  }
-  
-  .focus {
-    font-weight: bold;
-  }
-  
-  .hidden {
-      display: none;
-  }
-  
-  .hover {
-    background-color: #ffffbb;
-  }
-  
-  .reportTable {
-    font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-    color: #696969;
-    border-collapse: collapse;
-    border-spacing: 3px;
-    table-layout: fixed;
-  }
-  
-  th.headerCell {
-    background-color: #1E2C5B;
-    color: white;
-    padding: 5px;
-    border-bottom: 1px solid #BDC3C7;
-  }
-  
-  .headerCell.dimension {
-    background-color: #1E2C5B;
-    border-right: 1px solid #BDC3C7; 
-    color: white;
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
+}
 
-  }
-  
-  .headerCell.pivot {
-    background-color: #1E2C5B;
-    border-right: 1px solid #BDC3C7; 
-    color: white;
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
+}
 
-  }
-  
-  .headerCell.measure {
-    background-color: #1E2C5B;
-    border-left: 1px solid #BDC3C7; 
-    color: white;
+#tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #333;
+  z-index: 10;
+}
 
-  }
-  
-  .headerCell.measure.calculation {
-    background-color: #1E2C5B;
-    border-left: 1px solid #BDC3C7;
-    color: white;
+.tooltipTable {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-collapse: collapse;
+  table-layout: auto;
+}
 
-  }
-  
-  .headerCell.transposed.dimension {
-    background-color: #1E2C5B;
-    color: white;
+.focus {
+  font-weight: bold;
+}
 
-  }
-  
-  .headerCell.transposed.dimension.merged {
-    background-color: #1E2C5B !important;
-    color: white;
+.hidden {
+  display: none;
+}
 
-  }
-  
-  /* .headerCell.dimension.headerRow {
-    background-color: #ccd8e4;
-    border-right: 1px solid #BDC3C7;
-  }
-  .headerCell.pivot.headerRow {
-    background-color: #ccd8e4;
-    border-right: 1px solid #BDC3C7;
-  }
-  .headerCell.measure.headerRow {
-    background-color: #ccd8e4;
-    border-left: 1px solid #BDC3C7;
-  } */
-  
-  .rowCell {
-    vertical-align: super;
-    padding-left: 5px;
-    border-bottom: 1px solid #BDC3C7; 
-  }
-  
-  .rowCell.merged {
-    background-color: #ffffff !important;
-  }
-  
-  .indexCell.transposed {
-    font-weight: bold;
-  }
-  
-  .indexCell.transposed.pivot {
-    background-color: #ccd8e4;
-  }
-  
-  .indexCell.transposed.dimension {
-    background-color: #e4ecf3;
-  }
-  
-  .indexCell.transposed.measure {
-    background-color: #e4d0bd;
-  }
-  
-  .indexCell.transposed.calculation {
-    background-color: #c9dfc5;
-  }
-  
-  .indexCell.transposed.pivot.merged {
-    background-color: #ccd8e4 !important;
-  }
-  
-  .indexCell.transposed.dimension.merged {
-    background-color: #e4ecf3 !important;
-  }
-  
-  .indexCell.transposed.measure.merged {
-    background-color: #e4d0bd !important;
-  }
-  
-  .indexCell.transposed.calculation.merged {
-    background-color: #c9dfc5 !important;
-  }
-  
-  .nonNumeric {
-    text-align: left;
-  }
-  
-  .numeric {
-    text-align: right;
-  }
-  
-  .negative {
-    color: red;
-  }
-  
-  .estimate {
-    color: darkgray !important;
-  }
-  
-  .singleIndex {
-    padding-left: 15px !important;
-  }
-  
-  .subtotal {
-    font-style: italic;
-    font-weight: bold;
-    background: #D3D3D3;
-  }
-  
-  .total {
-    border-top: 2px solid #696969 !important;
-    font-weight: bold !important;
-  }
-  
-  .total.transposed {
-    border-top: 0px !important;
-    background: #D3D3D3;
-  }
-  
-  .rectElem.animated {
-    font-family: Open Sans,Helvetica,Arial,sans-serif;
-    margin: 4px;
-  }
+.hover {
+  background-color: #fef9d7;
+}
+
+.reportTable {
+  font-family: 'Open Sans', Helvetica, Arial, 'Noto Sans TC', 'Noto Sans SC', sans-serif;
+  color: #444;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+th.headerCell {
+  background-color: #2a3f71;
+  color: white;
+  padding: 10px 8px;
+  text-align: left;
+  border-bottom: 2px solid #c5c5c5;
+}
+
+.headerCell.dimension,
+.headerCell.pivot,
+.headerCell.measure,
+.headerCell.measure.calculation,
+.headerCell.transposed.dimension,
+.headerCell.transposed.dimension.merged {
+  background-color: #2a3f71;
+  color: white;
+  padding: 10px 8px;
+}
+
+.rowCell {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.rowCell:hover {
+  background-color: #f3f6fd;
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed {
+  font-weight: bold;
+}
+
+.indexCell.transposed.pivot {
+  background-color: #e3e9f4;
+}
+
+.indexCell.transposed.dimension {
+  background-color: #f0f4f9;
+}
+
+.indexCell.transposed.measure {
+  background-color: #f9efe7;
+}
+
+.indexCell.transposed.calculation {
+  background-color: #e6f3e3;
+}
+
+.indexCell.transposed.pivot.merged,
+.indexCell.transposed.dimension.merged,
+.indexCell.transposed.measure.merged,
+.indexCell.transposed.calculation.merged {
+  opacity: 0.95;
+}
+
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: right;
+}
+
+.negative {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.estimate {
+  color: #9e9e9e !important;
+  font-style: italic;
+}
+
+.singleIndex {
+  padding-left: 20px !important;
+}
+
+.subtotal {
+  font-style: italic;
+  font-weight: bold;
+  background-color: #e2e2e2;
+  color: #333;
+}
+
+.total {
+  border-top: 2px solid #555 !important;
+  font-weight: bold !important;
+  background-color: #dcdcdc;
+  color: #222;
+}
+
+.total.transposed {
+  background-color: #dcdcdc;
+  border-top: 0 !important;
+}
+
+.rectElem.animated {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin: 4px;
+}
