@@ -2,7 +2,7 @@
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* key for truncating */
+  table-layout: auto;  /* Let browser adjust column width based on content */
   background-color: #fff;
   border: 1px solid #dcdcdc;
   border-radius: 6px;
@@ -14,13 +14,13 @@
 .reportTable td {
   padding: 12px 14px;
   border: 1px solid #e0e0e0;
-  vertical-align: middle;
+  vertical-align: top;
   text-align: left;
   font-size: 13px;
   color: #333;
-  white-space: nowrap;            /* Prevent wrapping */
-  overflow: hidden;               /* Hide overflow */
-  text-overflow: ellipsis;        /* Add ellipsis */
+  white-space: normal;            /* Allow line wrap */
+  overflow-wrap: break-word;     /* Wrap long words */
+  word-break: break-word;
 }
 
 .reportTable th {
@@ -44,7 +44,7 @@
   font-style: italic;
 }
 
-/* Optional: define specific widths */
+/* Optional: Column width suggestion */
 .reportTable th:first-child,
 .reportTable td:first-child {
   width: 35%;
