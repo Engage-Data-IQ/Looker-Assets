@@ -2,9 +2,9 @@
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   width: 100%;
   border-collapse: collapse;
-  table-layout: auto;
+  table-layout: fixed; /* key for truncating */
   background-color: #fff;
-  border: 1px solid #dcdcdc; /* outer border */
+  border: 1px solid #dcdcdc;
   border-radius: 6px;
   margin-top: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
@@ -12,26 +12,27 @@
 
 .reportTable th,
 .reportTable td {
-  padding: 14px 16px;
-  border: 1px solid #e0e0e0; /* inner borders */
-  vertical-align: top;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  vertical-align: middle;
   text-align: left;
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
-  white-space: normal;
-  word-wrap: break-word;
+  white-space: nowrap;            /* Prevent wrapping */
+  overflow: hidden;               /* Hide overflow */
+  text-overflow: ellipsis;        /* Add ellipsis */
 }
 
 .reportTable th {
   background-color: #1E2C5B;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .reportTable tr:nth-child(even) {
-  background-color: #f9f9f9; /* striped rows */
+  background-color: #f9f9f9;
 }
 
 .reportTable td.answer {
@@ -43,7 +44,7 @@
   font-style: italic;
 }
 
-/* Optional: Manually set column widths */
+/* Optional: define specific widths */
 .reportTable th:first-child,
 .reportTable td:first-child {
   width: 35%;
